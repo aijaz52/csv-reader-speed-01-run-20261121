@@ -74,7 +74,7 @@ export function run(input) {
       kept += p - start;
     }
     i = p;
-    return { value: segs.join(''), ended, kept };
+    return { value: segs.length === 1 ? segs[0] : segs.join(''), ended, kept };
   }
 
   while (true) {
@@ -164,7 +164,7 @@ export function run(input) {
           } else {
             // What follows the closing quote is appended as it stands, up to
             // the next comma or line break; quote_junk when characters were kept.
-            const r = readRun([segs.join('')], i);
+            const r = readRun(segs, i);
             fields.push(r.value);
             if (r.kept > 0) errors.push({ code: 'quote_junk', line: recordLine, row: recordRow });
             ended = r.ended;

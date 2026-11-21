@@ -10,7 +10,7 @@ input, including its broken-row policy: stray CR dropped (`stray_cr`), untermina
 quotes read as literals (`unterminated_quote`), junk after a closing quote appended
 (`quote_junk`), short rows padded and long rows cut (`short_row` / `long_row`).
 
-`solve.js` scans by code unit and builds fields from string slices instead of the
+`solve.js` scans by code unit and assembles fields from string slices instead of the
 reference's one-character-at-a-time loop; `main.ts` is the driver the harness runs,
 reading `/input/cases.json` and writing `/output/answers.json` with V8's incremental
 marking off.
