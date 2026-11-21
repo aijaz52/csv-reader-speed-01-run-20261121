@@ -1,0 +1,8 @@
+{
+  "name": "csv-reader-speed-01-run-20261121",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fast drop-in for csv-reader 1.0.0 with identical answers, for make.fun csv-reader-speed-01-run-20261121",
+  "main": "main.ts"
+}
